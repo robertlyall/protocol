@@ -1,3 +1,4 @@
+import { GoogleTagManager } from "@next/third-parties/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -20,6 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID} />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
